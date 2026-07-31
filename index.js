@@ -56,21 +56,34 @@
 
 //Promises
 
-const myPromise = new Promise((resolve,reject)=>{
-    username = "risingstarohan";
-    password = "rohan1234"
-    if(username == "risingstarohan" && password == "rohan1234"){
-        resolve("success")
-    } else{
-        reject("username or password is incorrect")
+// const myPromise = new Promise((resolve,reject)=>{
+//     username = "risingstarohan";
+//     password = "rohan1234"
+//     if(username == "risingstarohan" && password == "rohan1234"){
+//         resolve("success")
+//     } else{
+//         reject("username or password is incorrect")
+//     }
+
+// })
+
+// myPromise.then((msg)=>{
+//     console.log(msg)
+// }).catch((msg)=>{
+//     console.log(msg)
+// }).finally(()=>{
+//     console.log("All the resources have been closed/memory released")
+// })
+
+async function handleLogin(){
+    try{
+        await myPromise
+
+    }catch (e){
+        console.log(e)
     }
-
-})
-
-myPromise.then((msg)=>{
-    console.log(msg)
-}).catch((msg)=>{
-    console.log(msg)
-}).finally(()=>{
-    console.log("All the resources have been closed/memory released")
-})
+    finally{
+        console.log("All the resources have been closed/memory released")
+    }
+}
+handleLogin();
