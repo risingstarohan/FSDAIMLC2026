@@ -66,3 +66,11 @@ const myPromise = new Promise((resolve,reject)=>{
     }
 
 })
+
+myPromise.then((msg)=>{
+    console.log(msg)
+}).catch((msg)=>{
+    console.log(msg)
+}).finally(()=>{
+    console.log("All the resources have been closed/memory released")
+})
