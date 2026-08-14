@@ -75,15 +75,24 @@
 //     console.log("All the resources have been closed/memory released")
 // })
 
-async function handleLogin(){
-    try{
-        await myPromise
+// async function handleLogin(){
+//     try{
+//         await myPromise
 
-    }catch (e){
-        console.log(e)
-    }
-    finally{
-        console.log("All the resources have been closed/memory released")
-    }
-}
-handleLogin();
+//     }catch (e){
+//         console.log(e)
+//     }
+//     finally{
+//         console.log("All the resources have been closed/memory released")
+//     }
+// }
+// handleLogin();
+
+async function getData() {
+    try {
+        const response = await fetch('https://jsonplaceholder.typicodeode.com/posts');
+        const data = await response.json();
+        console.log(data);
+    }   catch (error) {
+        console.error('Error fetching data:', error);
+    }           
