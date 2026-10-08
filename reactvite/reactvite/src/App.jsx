@@ -6,6 +6,7 @@ import './App.css'
 import ICard from './component/ICard'
 import ICardGallery from './component/ICardGallery'
 import StateHandling from './component/StateHandling'
+import Imagemanipulation from './component/Imagemanipulation'
 
 function App() {
   
@@ -14,7 +15,8 @@ function App() {
     <div style={{border:'2px solid black', height:'500px'}}>
     
       {/** <ICardGallery /> */}
-       <StateHandling />
+       {/**<StateHandling />*/}
+       <Imagemanipulation/>
      
     </div>
   )
